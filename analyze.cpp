@@ -73,20 +73,20 @@ void restore() {
 	in >> week;
 
 	int sz;
-	cin >> sz;
+	in >> sz;
 	for (int i = 0; i < sz; ++i) {
 		uint64_t a;
 		int b;
-		cin >> a >> b;
+		in >> a >> b;
 		burned.push_back({a, b});
 	}
 
-	cin >> sz;
+	in >> sz;
 	for (int i = 0; i < sz; ++i) {
 		uint64_t a;
 		uint32_t b;
 		int c;
-		cin >> a >> b >> c;
+		in >> a >> b >> c;
 		john.push_back({a, b, c});
 	}
 
@@ -450,8 +450,8 @@ int main() {
 			for (int j = 0; j < value_collection.size(); ++j) {
 				utxo[{tx_hash, j}] = value_collection[j];
 				utxo_sum += value_collection[j];
-				recent.push_back({timestamp, tx_hash, j});
 			}
+			recent.push_back({timestamp, tx_hash, value_collection.size()});
 //			cout << "Tx hash: " << tx_hash << '\n';
 		}
 //		cout << '\n';
@@ -459,44 +459,58 @@ int main() {
 		fclose(f);
 
 		// block done.. do somthing..
-		system((string("mv blocks/") + prev_hash + string("trash/")).c_str());
+		system((string("mv blocks/") + prev_hash + string(" trash/")).c_str());
 		
 		// utxo time update
 		while (!recent.empty() && get<0>(*recent.begin()) <= timestamp - 3 * 365 * 24 * 60 * 60) {
-			pair<string, uint32_t> info = {get<1>(*recent.begin()), get<2>(*recent.begin())};
-			if (utxo.count(info)) {
-				uint64_t value = utxo[info];
-				utxo_3year[info] = value;
-				utxo_3year_sum += value;
-				utxo.erase(info);
-				utxo_sum -= value;
+			bool passed = 0;
+			for (int j = 0; j < get<2>(*recent.begin()); ++j) {
+				pair<string, uint32_t> info = {get<1>(*recent.begin()), j};
+				if (utxo.count(info)) {
+					uint64_t value = utxo[info];
+					utxo_3year[info] = value;
+					utxo_3year_sum += value;
+					utxo.erase(info);
+					utxo_sum -= value;
+					passed = 1;
+				}
+			}
+			if (passed) {
 				recent_3year.push_back(*recent.begin());
 			}
 			recent.pop_front();
 		}
 		while (!recent_3year.empty() && get<0>(*recent_3year.begin()) <= timestamp - 5 * 365 * 24 * 60 * 60) {
-			pair<string, uint32_t> info = {get<1>(*recent_3year.begin()), get<2>(*recent_3year.begin())};
-			if (utxo_3year.count(info)) {
-				uint64_t value = utxo_3year[info];
-				utxo_5year[info] = value;
-				utxo_5year_sum += value;
-				utxo_3year.erase(info);
-				utxo_3year_sum -= value;
+			bool passed = 0;
+			for (int j = 0; j < get<2>(*recent_3year.begin()); ++j) {
+				pair<string, uint32_t> info = {get<1>(*recent_3year.begin()), j};
+				if (utxo_3year.count(info)) {
+					uint64_t value = utxo_3year[info];
+					utxo_5year[info] = value;
+					utxo_5year_sum += value;
+					utxo_3year.erase(info);
+					utxo_3year_sum -= value;
+					passed = 1;
+				}
+			}
+			if (passed) {
 				recent_5year.push_back(*recent_3year.begin());
 			}
 			recent_3year.pop_front();
 		}
 		while (!recent_5year.empty() && get<0>(*recent_5year.begin()) <= timestamp - 10 * 365 * 24 * 60 * 60) {
-			pair<string, uint32_t> info = {get<1>(*recent_5year.begin()), get<2>(*recent_5year.begin())};
-			if (utxo_5year.count(info)) {
-				uint64_t value = utxo_5year[info];
-				utxo_10year[info] = {value, get<0>(*recent_5year.begin())};
-				utxo_10year_sum += value;
-				if (utxo_10year.size() > MAX_COLD_SIZE) {
-					flush();
+			for (int j = 0; j < get<2>(*recent_5year.begin()); ++j) {
+				pair<string, uint32_t> info = {get<1>(*recent_5year.begin()), j};
+				if (utxo_5year.count(info)) {
+					uint64_t value = utxo_5year[info];
+					utxo_10year[info] = {value, get<0>(*recent_5year.begin())};
+					utxo_10year_sum += value;
+					if (utxo_10year.size() > MAX_COLD_SIZE) {
+						flush();
+					}
+					utxo_5year.erase(info);
+					utxo_5year_sum -= value;
 				}
-				utxo_5year.erase(info);
-				utxo_5year_sum -= value;
 			}
 			recent_5year.pop_front();
 		}
