@@ -2,5 +2,8 @@ blocks/*
 blocks_raw/*
 info/*
 trash/*
+analyzed_temp/*
 analyze
 000000*
+*.log
+*.swp

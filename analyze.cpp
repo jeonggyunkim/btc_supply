@@ -36,8 +36,8 @@ int64_t utxo_sum;
 int64_t utxo_3year_sum;
 int64_t utxo_5year_sum;
 int64_t utxo_10year_sum;
+int utxo_10year_cnt;
 
-int utxo_cnt;
 int total_tx_count;
 int prev_total_tx_count;
 int start_block_height;
@@ -95,7 +95,7 @@ void restore() {
 	in >> utxo_5year_sum;
 	in >> utxo_10year_sum;
 
-	in >> utxo_cnt;
+	in >> utxo_10year_cnt;
 	in >> total_tx_count;
 	in >> prev_total_tx_count;
 	in >> start_block_height;
@@ -152,7 +152,7 @@ void save() {
 	out << utxo_5year_sum << '\n';
 	out << utxo_10year_sum << '\n';
 
-	out << utxo_cnt << '\n';
+	out << utxo_10year_cnt << '\n';
 	out << total_tx_count << '\n';
 	out << prev_total_tx_count << '\n';
 	out << start_block_height << '\n';
@@ -227,6 +227,7 @@ pair<uint64_t, uint32_t> erase_in_cold(string txhash, uint32_t txindex, uint32_t
 		out.close();
 		system("mv info/temp info/utxo_cold");
 	}
+	utxo_10year_cnt--;
 
 	john.push_back({ret.first, timestamp - ret.second, block_height});
 	return ret;
@@ -234,7 +235,7 @@ pair<uint64_t, uint32_t> erase_in_cold(string txhash, uint32_t txindex, uint32_t
 
 void analyze() {
 	ofstream out;
-	out.open("analyzed/week" + to_string(week));
+	out.open("analyzed_temp/week" + to_string(week));
 	out << start_block_height << ' ' << block_height - 1 << '\n';
 	out << total_tx_count - prev_total_tx_count << '\n';
 
@@ -246,7 +247,7 @@ void analyze() {
 	out << utxo.size() << '\n';
 	out << utxo_3year.size() << '\n';
 	out << utxo_5year.size() << '\n';
-	out << utxo_cnt - utxo_5year.size() - utxo_3year.size() - utxo.size() << '\n';
+	out << utxo_10year_cnt << '\n';
 
 	out << burned.size() << '\n';
 	for (int i = 0; i < burned.size(); ++i) {
@@ -347,7 +348,7 @@ int main() {
 		uint32_t timestamp = *(uint32_t*)(block + 68);
 		index += sz;
 
-		if (timestamp >= start_of_something_new + 7 * 24 * 60 * 60) {
+		if (timestamp >= start_of_something_new + week * 7 * 24 * 60 * 60) {
 			analyze();
 			week++;
 		}
@@ -418,7 +419,6 @@ int main() {
 						input_total += value;
 						utxo_10year_sum -= value;
 					}
-					utxo_cnt--;
 				}
 			}
 
@@ -437,8 +437,6 @@ int main() {
 
 				sz = fread(block + index, 1, script_length, f);
 				index += sz;
-
-				utxo_cnt++;
 			}
 			sz = fread(block + index, 1, 4, f);
 			uint64_t lock_time = *(uint64_t*)(block + index);
@@ -459,7 +457,7 @@ int main() {
 		fclose(f);
 
 		// block done.. do somthing..
-		system((string("mv blocks/") + prev_hash + string(" trash/")).c_str());
+//		system((string("mv blocks/") + prev_hash + string(" trash/")).c_str());
 		
 		// utxo time update
 		while (!recent.empty() && get<0>(*recent.begin()) <= timestamp - 3 * 365 * 24 * 60 * 60) {
@@ -505,6 +503,7 @@ int main() {
 					uint64_t value = utxo_5year[info];
 					utxo_10year[info] = {value, get<0>(*recent_5year.begin())};
 					utxo_10year_sum += value;
+					utxo_10year_cnt++;
 					if (utxo_10year.size() > MAX_COLD_SIZE) {
 						flush();
 					}
