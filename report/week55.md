@@ -1,31 +1,33 @@
 # Bitcoin Week 55
 
-Block number: 34990~35980
+- Block number: 34990~35980
 
-The number of transaction on this week: 1005
+- Date: 2010-01-17 03:15:05~2010-01-24 03:15:04
 
-Total utxo: 33078
+- The number of transaction on this week: 1005
+
+- Total utxo: 33078
 
 ![](../images/mined_week55.png)
 
-Theoretical Total Supply: 20999999.97690000 BTC
+- Theoretical Total Supply: 20999999.97690000 BTC
 
-Permanently disappeared: 0.00000000 BTC
+- Permanently Disappeared: 0.00000000 BTC
 
-Maximum Possible Total Supply: 20999999.97690000 BTC
+- Maximum Possible Total Supply: 20999999.97690000 BTC
 
-Current Supply: 1799050.00000000 BTC (8.567%)
+- Current Supply: 1799050.00000000 BTC (8.567%)
 
 ![](../images/year_week55.png)
 
 
-Current Supply: 1799050.00000000 BTC (100.000%)
+- Current Supply: 1799050.00000000 BTC (100.000%)
 
-More than 3 year: 0.00000000 BTC (0.000%)
+- More than 3 years: 0.00000000 BTC (0.000%)
 
-More than 5 year: 0.00000000 BTC (0.000%)
+- More than 5 years: 0.00000000 BTC (0.000%)
 
-More than 10 year: 0.00000000 BTC (0.000%)
+- More than 10 years: 0.00000000 BTC (0.000%)
 
 # Remarks
 

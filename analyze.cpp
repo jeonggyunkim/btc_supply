@@ -446,7 +446,7 @@ int main() {
 
 			string tx_hash = reverse_hash(double_sha256(block + start, end - start));
 			for (int j = 0; j < value_collection.size(); ++j) {
-				utxo[{tx_hash, j}] = value_collection[j];
+				utxo[{tx_hash, j}] += value_collection[j];
 				utxo_sum += value_collection[j];
 			}
 			recent.push_back({timestamp, tx_hash, value_collection.size()});
@@ -457,7 +457,7 @@ int main() {
 		fclose(f);
 
 		// block done.. do somthing..
-//		system((string("mv blocks/") + prev_hash + string(" trash/")).c_str());
+		system((string("mv blocks/") + prev_hash + string(" trash/")).c_str());
 		
 		// utxo time update
 		while (!recent.empty() && get<0>(*recent.begin()) <= timestamp - 3 * 365 * 24 * 60 * 60) {
@@ -515,7 +515,7 @@ int main() {
 		}
 
 		if (output_total - input_total != reward[block_height / 210000]) {
-			cerr << reward[block_height / 210000] - (output_total - input_total) << "Satoshi permanently disappered on block " << block_height << '\n';
+//			cerr << reward[block_height / 210000] - (output_total - input_total) << "Satoshi permanently disappered on block " << block_height << '\n';
 			burned.push_back({reward[block_height / 210000] - (output_total - input_total), block_height});
 		}
 

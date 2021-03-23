@@ -1,2 +1,2 @@
 make:
-	g++ -g -o analyze analyze.cpp sha256.cpp
+	g++ -O2 -o analyze analyze.cpp sha256.cpp

@@ -1,0 +1,45 @@
+# Bitcoin Week 198
+
+- Block number: 203135~204174
+
+- Date: 2012-10-14 03:15:05~2012-10-21 03:15:04
+
+- The number of transaction on this week: 207484
+
+- Total utxo: 2590589
+
+![](../images/mined_week198.png)
+
+- Theoretical Total Supply: 20999999.97690000 BTC
+
+- Permanently Disappeared: 10.02438817 BTC
+
+- Maximum Possible Total Supply: 20999989.95251183 BTC
+
+- Current Supply: 10208739.97561183 BTC (48.613%)
+
+![](../images/year_week198.png)
+
+
+- Current Supply: 10208739.97561183 BTC (100.000%)
+
+- More than 3 years: 966355.24000000 BTC (9.466%)
+
+- More than 5 years: 0.00000000 BTC (0.000%)
+
+- More than 10 years: 0.00000000 BTC (0.000%)
+
+# Remarks
+
+## Permanently Disappeared BTC
+
+- 50000 satoshi disappeared on block 203214
+
+- 50000 satoshi disappeared on block 203397
+
+- 100000 satoshi disappeared on block 203453
+
+- 50000 satoshi disappeared on block 203514
+
+- 50000 satoshi disappeared on block 203646
+

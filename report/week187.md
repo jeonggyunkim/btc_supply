@@ -1,0 +1,87 @@
+# Bitcoin Week 187
+
+- Block number: 191240~192320
+
+- Date: 2012-07-29 03:15:05~2012-08-05 03:15:04
+
+- The number of transaction on this week: 231315
+
+- Total utxo: 1924045
+
+![](../images/mined_week187.png)
+
+- Theoretical Total Supply: 20999999.97690000 BTC
+
+- Permanently Disappeared: 9.91057124 BTC
+
+- Maximum Possible Total Supply: 20999990.06632876 BTC
+
+- Current Supply: 9616040.08942876 BTC (45.791%)
+
+![](../images/year_week187.png)
+
+
+- Current Supply: 9616040.08942876 BTC (100.000%)
+
+- More than 3 years: 814055.12000000 BTC (8.466%)
+
+- More than 5 years: 0.00000000 BTC (0.000%)
+
+- More than 10 years: 0.00000000 BTC (0.000%)
+
+# Remarks
+
+## Permanently Disappeared BTC
+
+- 50000 satoshi disappeared on block 191241
+
+- 50000 satoshi disappeared on block 191244
+
+- 50000 satoshi disappeared on block 191297
+
+- 50000 satoshi disappeared on block 191351
+
+- 50000 satoshi disappeared on block 191352
+
+- 50000 satoshi disappeared on block 191392
+
+- 50000 satoshi disappeared on block 191400
+
+- 50000 satoshi disappeared on block 191431
+
+- 52500 satoshi disappeared on block 191503
+
+- 50000 satoshi disappeared on block 191507
+
+- 50000 satoshi disappeared on block 191511
+
+- 50000 satoshi disappeared on block 191514
+
+- 50000 satoshi disappeared on block 191524
+
+- 50000 satoshi disappeared on block 191622
+
+- 50000 satoshi disappeared on block 191733
+
+- 50000 satoshi disappeared on block 191784
+
+- 50000 satoshi disappeared on block 191882
+
+- 50000 satoshi disappeared on block 191901
+
+- 50000 satoshi disappeared on block 192038
+
+- 200000 satoshi disappeared on block 192081
+
+- 50000 satoshi disappeared on block 192095
+
+- 50000 satoshi disappeared on block 192113
+
+- 50000 satoshi disappeared on block 192160
+
+- 50000 satoshi disappeared on block 192208
+
+- 50000 satoshi disappeared on block 192237
+
+- 50000 satoshi disappeared on block 192239
+

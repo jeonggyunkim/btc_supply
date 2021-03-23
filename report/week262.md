@@ -1,0 +1,33 @@
+# Bitcoin Week 262
+
+- Block number: 278609~279939
+
+- Date: 2014-01-05 03:15:05~2014-01-12 03:15:04
+
+- The number of transaction on this week: 419943
+
+- Total utxo: 8261539
+
+![](../images/mined_week262.png)
+
+- Theoretical Total Supply: 20999999.97690000 BTC
+
+- Permanently Disappeared: 10.19768817 BTC
+
+- Maximum Possible Total Supply: 20999989.77921183 BTC
+
+- Current Supply: 12248489.80231183 BTC (58.326%)
+
+![](../images/year_week262.png)
+
+
+- Current Supply: 12248489.80231183 BTC (100.000%)
+
+- More than 3 years: 2045586.96697375 BTC (16.701%)
+
+- More than 5 years: 11911.00000000 BTC (0.097%)
+
+- More than 10 years: 0.00000000 BTC (0.000%)
+
+# Remarks
+

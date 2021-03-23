@@ -1,0 +1,121 @@
+# Bitcoin Week 186
+
+- Block number: 190120~191239
+
+- Date: 2012-07-22 03:15:05~2012-07-29 03:15:04
+
+- The number of transaction on this week: 215217
+
+- Total utxo: 1897405
+
+![](../images/mined_week186.png)
+
+- Theoretical Total Supply: 20999999.97690000 BTC
+
+- Permanently Disappeared: 9.89604624 BTC
+
+- Maximum Possible Total Supply: 20999990.08085376 BTC
+
+- Current Supply: 9561990.10395376 BTC (45.533%)
+
+![](../images/year_week186.png)
+
+
+- Current Supply: 9561990.10395376 BTC (100.000%)
+
+- More than 3 years: 808900.12000000 BTC (8.460%)
+
+- More than 5 years: 0.00000000 BTC (0.000%)
+
+- More than 10 years: 0.00000000 BTC (0.000%)
+
+# Remarks
+
+## Permanently Disappeared BTC
+
+- 50000 satoshi disappeared on block 190136
+
+- 50000 satoshi disappeared on block 190145
+
+- 50000 satoshi disappeared on block 190190
+
+- 50000 satoshi disappeared on block 190218
+
+- 50000 satoshi disappeared on block 190238
+
+- 50000 satoshi disappeared on block 190242
+
+- 50000 satoshi disappeared on block 190279
+
+- 50000 satoshi disappeared on block 190296
+
+- 50000 satoshi disappeared on block 190331
+
+- 50000 satoshi disappeared on block 190360
+
+- 50000 satoshi disappeared on block 190363
+
+- 50000 satoshi disappeared on block 190372
+
+- 50000 satoshi disappeared on block 190377
+
+- 50000 satoshi disappeared on block 190444
+
+- 50000 satoshi disappeared on block 190456
+
+- 50000 satoshi disappeared on block 190462
+
+- 50000 satoshi disappeared on block 190534
+
+- 50000 satoshi disappeared on block 190605
+
+- 50000 satoshi disappeared on block 190628
+
+- 50000 satoshi disappeared on block 190704
+
+- 50000 satoshi disappeared on block 190707
+
+- 50000 satoshi disappeared on block 190730
+
+- 50000 satoshi disappeared on block 190818
+
+- 50000 satoshi disappeared on block 190821
+
+- 50000 satoshi disappeared on block 190822
+
+- 50000 satoshi disappeared on block 190826
+
+- 50000 satoshi disappeared on block 190852
+
+- 50000 satoshi disappeared on block 190865
+
+- 50000 satoshi disappeared on block 190892
+
+- 50000 satoshi disappeared on block 190898
+
+- 50000 satoshi disappeared on block 190925
+
+- 50000 satoshi disappeared on block 190969
+
+- 50000 satoshi disappeared on block 191038
+
+- 50000 satoshi disappeared on block 191046
+
+- 50000 satoshi disappeared on block 191053
+
+- 50000 satoshi disappeared on block 191063
+
+- 50000 satoshi disappeared on block 191104
+
+- 50000 satoshi disappeared on block 191137
+
+- 50000 satoshi disappeared on block 191155
+
+- 50000 satoshi disappeared on block 191158
+
+- 50000 satoshi disappeared on block 191177
+
+- 50000 satoshi disappeared on block 191182
+
+- 100000 satoshi disappeared on block 191203
+

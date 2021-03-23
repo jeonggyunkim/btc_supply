@@ -1,263 +1,265 @@
 # Bitcoin Week 160
 
-Block number: 163245~164259
+- Block number: 163245~164259
 
-The number of transaction on this week: 45452
+- Date: 2012-01-22 03:15:05~2012-01-29 03:15:04
 
-Total utxo: 1288080
+- The number of transaction on this week: 45452
+
+- Total utxo: 1288080
 
 ![](../images/mined_week160.png)
 
-Theoretical Total Supply: 20999999.97690000 BTC
+- Theoretical Total Supply: 20999999.97690000 BTC
 
-Permanently disappeared: 7.01758385 BTC
+- Permanently Disappeared: 7.01758385 BTC
 
-Maximum Possible Total Supply: 20999992.95931615 BTC
+- Maximum Possible Total Supply: 20999992.95931615 BTC
 
-Current Supply: 8212992.98241615 BTC (39.110%)
+- Current Supply: 8212992.98241615 BTC (39.110%)
 
 ![](../images/year_week160.png)
 
 
-Current Supply: 8212992.98241615 BTC (100.000%)
+- Current Supply: 8212992.98241615 BTC (100.000%)
 
-More than 3 year: 95565.00000000 BTC (1.164%)
+- More than 3 years: 95565.00000000 BTC (1.164%)
 
-More than 5 year: 0.00000000 BTC (0.000%)
+- More than 5 years: 0.00000000 BTC (0.000%)
 
-More than 10 year: 0.00000000 BTC (0.000%)
+- More than 10 years: 0.00000000 BTC (0.000%)
 
 # Remarks
 
 ## Permanently Disappeared BTC
 
-1251000 satoshi disappeared on block 163274
+- 1251000 satoshi disappeared on block 163274
 
-250000 satoshi disappeared on block 163283
+- 250000 satoshi disappeared on block 163283
 
-4350000 satoshi disappeared on block 163284
+- 4350000 satoshi disappeared on block 163284
 
-2250000 satoshi disappeared on block 163285
+- 2250000 satoshi disappeared on block 163285
 
-1100000 satoshi disappeared on block 163353
+- 1100000 satoshi disappeared on block 163353
 
-8300501 satoshi disappeared on block 163368
+- 8300501 satoshi disappeared on block 163368
 
-4289790 satoshi disappeared on block 163370
+- 4289790 satoshi disappeared on block 163370
 
-150000 satoshi disappeared on block 163433
+- 150000 satoshi disappeared on block 163433
 
-5750000 satoshi disappeared on block 163440
+- 5750000 satoshi disappeared on block 163440
 
-1500000 satoshi disappeared on block 163447
+- 1500000 satoshi disappeared on block 163447
 
-350000 satoshi disappeared on block 163453
+- 350000 satoshi disappeared on block 163453
 
-3340477 satoshi disappeared on block 163458
+- 3340477 satoshi disappeared on block 163458
 
-650000 satoshi disappeared on block 163478
+- 650000 satoshi disappeared on block 163478
 
-5100000 satoshi disappeared on block 163480
+- 5100000 satoshi disappeared on block 163480
 
-5310000 satoshi disappeared on block 163588
+- 5310000 satoshi disappeared on block 163588
 
-1350000 satoshi disappeared on block 163592
+- 1350000 satoshi disappeared on block 163592
 
-1850000 satoshi disappeared on block 163596
+- 1850000 satoshi disappeared on block 163596
 
-1800000 satoshi disappeared on block 163611
+- 1800000 satoshi disappeared on block 163611
 
-5211463 satoshi disappeared on block 163615
+- 5211463 satoshi disappeared on block 163615
 
-15370000 satoshi disappeared on block 163620
+- 15370000 satoshi disappeared on block 163620
 
-300000 satoshi disappeared on block 163622
+- 300000 satoshi disappeared on block 163622
 
-2100000 satoshi disappeared on block 163623
+- 2100000 satoshi disappeared on block 163623
 
-430000 satoshi disappeared on block 163626
+- 430000 satoshi disappeared on block 163626
 
-2508784 satoshi disappeared on block 163628
+- 2508784 satoshi disappeared on block 163628
 
-17850000 satoshi disappeared on block 163633
+- 17850000 satoshi disappeared on block 163633
 
-11250000 satoshi disappeared on block 163647
+- 11250000 satoshi disappeared on block 163647
 
-5162317 satoshi disappeared on block 163656
+- 5162317 satoshi disappeared on block 163656
 
-500000 satoshi disappeared on block 163667
+- 500000 satoshi disappeared on block 163667
 
-5150000 satoshi disappeared on block 163672
+- 5150000 satoshi disappeared on block 163672
 
-400000 satoshi disappeared on block 163693
+- 400000 satoshi disappeared on block 163693
 
-15873449 satoshi disappeared on block 163709
+- 15873449 satoshi disappeared on block 163709
 
-13170451 satoshi disappeared on block 163710
+- 13170451 satoshi disappeared on block 163710
 
-500000 satoshi disappeared on block 163714
+- 500000 satoshi disappeared on block 163714
 
-4952000 satoshi disappeared on block 163719
+- 4952000 satoshi disappeared on block 163719
 
-2150000 satoshi disappeared on block 163726
+- 2150000 satoshi disappeared on block 163726
 
-1200000 satoshi disappeared on block 163729
+- 1200000 satoshi disappeared on block 163729
 
-1905454 satoshi disappeared on block 163756
+- 1905454 satoshi disappeared on block 163756
 
-1500000 satoshi disappeared on block 163791
+- 1500000 satoshi disappeared on block 163791
 
-400000 satoshi disappeared on block 163793
+- 400000 satoshi disappeared on block 163793
 
-2150000 satoshi disappeared on block 163808
+- 2150000 satoshi disappeared on block 163808
 
-12305008 satoshi disappeared on block 163830
+- 12305008 satoshi disappeared on block 163830
 
-300000 satoshi disappeared on block 163863
+- 300000 satoshi disappeared on block 163863
 
-1060000 satoshi disappeared on block 163881
+- 1060000 satoshi disappeared on block 163881
 
-2200000 satoshi disappeared on block 163889
+- 2200000 satoshi disappeared on block 163889
 
-350000 satoshi disappeared on block 163891
+- 350000 satoshi disappeared on block 163891
 
-50000 satoshi disappeared on block 163893
+- 50000 satoshi disappeared on block 163893
 
-401000 satoshi disappeared on block 163903
+- 401000 satoshi disappeared on block 163903
 
-2250000 satoshi disappeared on block 163915
+- 2250000 satoshi disappeared on block 163915
 
-4900000 satoshi disappeared on block 163918
+- 4900000 satoshi disappeared on block 163918
 
-4850000 satoshi disappeared on block 163939
+- 4850000 satoshi disappeared on block 163939
 
-4100000 satoshi disappeared on block 163947
+- 4100000 satoshi disappeared on block 163947
 
-250000 satoshi disappeared on block 163970
+- 250000 satoshi disappeared on block 163970
 
-450000 satoshi disappeared on block 163974
+- 450000 satoshi disappeared on block 163974
 
-6490002 satoshi disappeared on block 163975
+- 6490002 satoshi disappeared on block 163975
 
-4069600 satoshi disappeared on block 163977
+- 4069600 satoshi disappeared on block 163977
 
-1400000 satoshi disappeared on block 163979
+- 1400000 satoshi disappeared on block 163979
 
-31352898 satoshi disappeared on block 163985
+- 31352898 satoshi disappeared on block 163985
 
-1560000 satoshi disappeared on block 163989
+- 1560000 satoshi disappeared on block 163989
 
-450000 satoshi disappeared on block 163995
+- 450000 satoshi disappeared on block 163995
 
-3170000 satoshi disappeared on block 164003
+- 3170000 satoshi disappeared on block 164003
 
-13200000 satoshi disappeared on block 164007
+- 13200000 satoshi disappeared on block 164007
 
-250000 satoshi disappeared on block 164022
+- 250000 satoshi disappeared on block 164022
 
-2700000 satoshi disappeared on block 164023
+- 2700000 satoshi disappeared on block 164023
 
-800000 satoshi disappeared on block 164024
+- 800000 satoshi disappeared on block 164024
 
-450000 satoshi disappeared on block 164025
+- 450000 satoshi disappeared on block 164025
 
-4750000 satoshi disappeared on block 164027
+- 4750000 satoshi disappeared on block 164027
 
-1350000 satoshi disappeared on block 164028
+- 1350000 satoshi disappeared on block 164028
 
-350000 satoshi disappeared on block 164041
+- 350000 satoshi disappeared on block 164041
 
-110000 satoshi disappeared on block 164048
+- 110000 satoshi disappeared on block 164048
 
-14369496 satoshi disappeared on block 164049
+- 14369496 satoshi disappeared on block 164049
 
-200000 satoshi disappeared on block 164050
+- 200000 satoshi disappeared on block 164050
 
-3908648 satoshi disappeared on block 164056
+- 3908648 satoshi disappeared on block 164056
 
-150000 satoshi disappeared on block 164067
+- 150000 satoshi disappeared on block 164067
 
-1450000 satoshi disappeared on block 164081
+- 1450000 satoshi disappeared on block 164081
 
-72121726 satoshi disappeared on block 164084
+- 72121726 satoshi disappeared on block 164084
 
-450000 satoshi disappeared on block 164086
+- 450000 satoshi disappeared on block 164086
 
-1913010 satoshi disappeared on block 164095
+- 1913010 satoshi disappeared on block 164095
 
-3219980 satoshi disappeared on block 164098
+- 3219980 satoshi disappeared on block 164098
 
-1300020 satoshi disappeared on block 164099
+- 1300020 satoshi disappeared on block 164099
 
-4585127 satoshi disappeared on block 164100
+- 4585127 satoshi disappeared on block 164100
 
-3089997 satoshi disappeared on block 164105
+- 3089997 satoshi disappeared on block 164105
 
-120000 satoshi disappeared on block 164106
+- 120000 satoshi disappeared on block 164106
 
-850000 satoshi disappeared on block 164127
+- 850000 satoshi disappeared on block 164127
 
-1250000 satoshi disappeared on block 164128
+- 1250000 satoshi disappeared on block 164128
 
-1500154 satoshi disappeared on block 164133
+- 1500154 satoshi disappeared on block 164133
 
-350000 satoshi disappeared on block 164135
+- 350000 satoshi disappeared on block 164135
 
-1950000 satoshi disappeared on block 164139
+- 1950000 satoshi disappeared on block 164139
 
-4100000 satoshi disappeared on block 164143
+- 4100000 satoshi disappeared on block 164143
 
-8680005 satoshi disappeared on block 164147
+- 8680005 satoshi disappeared on block 164147
 
-400000 satoshi disappeared on block 164151
+- 400000 satoshi disappeared on block 164151
 
-3254365 satoshi disappeared on block 164157
+- 3254365 satoshi disappeared on block 164157
 
-1900000 satoshi disappeared on block 164159
+- 1900000 satoshi disappeared on block 164159
 
-1350000 satoshi disappeared on block 164162
+- 1350000 satoshi disappeared on block 164162
 
-3100000 satoshi disappeared on block 164165
+- 3100000 satoshi disappeared on block 164165
 
-2550000 satoshi disappeared on block 164169
+- 2550000 satoshi disappeared on block 164169
 
-450460 satoshi disappeared on block 164170
+- 450460 satoshi disappeared on block 164170
 
-50000 satoshi disappeared on block 164172
+- 50000 satoshi disappeared on block 164172
 
-1150000 satoshi disappeared on block 164173
+- 1150000 satoshi disappeared on block 164173
 
-50000 satoshi disappeared on block 164174
+- 50000 satoshi disappeared on block 164174
 
-560010 satoshi disappeared on block 164194
+- 560010 satoshi disappeared on block 164194
 
-450000 satoshi disappeared on block 164196
+- 450000 satoshi disappeared on block 164196
 
-100000 satoshi disappeared on block 164198
+- 100000 satoshi disappeared on block 164198
 
-1550000 satoshi disappeared on block 164199
+- 1550000 satoshi disappeared on block 164199
 
-1981000 satoshi disappeared on block 164201
+- 1981000 satoshi disappeared on block 164201
 
-3844053 satoshi disappeared on block 164203
+- 3844053 satoshi disappeared on block 164203
 
-50000 satoshi disappeared on block 164210
+- 50000 satoshi disappeared on block 164210
 
-6260001 satoshi disappeared on block 164211
+- 6260001 satoshi disappeared on block 164211
 
-150000 satoshi disappeared on block 164223
+- 150000 satoshi disappeared on block 164223
 
-2932385 satoshi disappeared on block 164237
+- 2932385 satoshi disappeared on block 164237
 
-100000 satoshi disappeared on block 164243
+- 100000 satoshi disappeared on block 164243
 
-175780069 satoshi disappeared on block 164246
+- 175780069 satoshi disappeared on block 164246
 
-1400000 satoshi disappeared on block 164248
+- 1400000 satoshi disappeared on block 164248
 
-1039082 satoshi disappeared on block 164252
+- 1039082 satoshi disappeared on block 164252
 
-2350000 satoshi disappeared on block 164253
+- 2350000 satoshi disappeared on block 164253
 
-4500000 satoshi disappeared on block 164254
+- 4500000 satoshi disappeared on block 164254
 

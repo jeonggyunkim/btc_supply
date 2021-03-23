@@ -1,0 +1,65 @@
+# Bitcoin Week 211
+
+- Block number: 216270~217184
+
+- Date: 2013-01-13 03:15:05~2013-01-20 03:15:04
+
+- The number of transaction on this week: 343858
+
+- Total utxo: 3424439
+
+![](../images/mined_week211.png)
+
+- Theoretical Total Supply: 20999999.97690000 BTC
+
+- Permanently Disappeared: 10.11698817 BTC
+
+- Maximum Possible Total Supply: 20999989.85991183 BTC
+
+- Current Supply: 10679614.88301183 BTC (50.855%)
+
+![](../images/year_week211.png)
+
+
+- Current Supply: 10679614.88301183 BTC (100.000%)
+
+- More than 3 years: 1149161.11000000 BTC (10.760%)
+
+- More than 5 years: 0.00000000 BTC (0.000%)
+
+- More than 10 years: 0.00000000 BTC (0.000%)
+
+# Remarks
+
+## Permanently Disappeared BTC
+
+- 100000 satoshi disappeared on block 216407
+
+- 100000 satoshi disappeared on block 216507
+
+- 50000 satoshi disappeared on block 216577
+
+- 50000 satoshi disappeared on block 216585
+
+- 50000 satoshi disappeared on block 216620
+
+- 50000 satoshi disappeared on block 216691
+
+- 100000 satoshi disappeared on block 216718
+
+- 100000 satoshi disappeared on block 216757
+
+- 50000 satoshi disappeared on block 216773
+
+- 50000 satoshi disappeared on block 216888
+
+- 50000 satoshi disappeared on block 216907
+
+- 50000 satoshi disappeared on block 216912
+
+- 100000 satoshi disappeared on block 216966
+
+- 50000 satoshi disappeared on block 217056
+
+- 50000 satoshi disappeared on block 217140
+

@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import sys
+from datetime import datetime
 
+genesis = 1231006505
 reward = [5000000000, 2500000000, 1250000000, 625000000, 312500000, 156250000, 78125000, 39062500, 19531250]
 def btc(value):
     return '{}.{:08d}'.format(value // 100000000, value % 100000000)
@@ -96,31 +98,32 @@ for week in range(1, 10000):
     f = open('report/week{}.md'.format(week), 'wt')
 
     print('# Bitcoin Week {}\n'.format(week), file = f)
-    print('Block number: {}~{}\n'.format(block_start, block_end), file = f)
-    print('The number of transaction on this week: {}\n'.format(tx_count), file = f)
-    print('Total utxo: {}\n'.format(utxo_cnt + utxo3_cnt + utxo5_cnt + utxo10_cnt), file = f)
+    print('- Block number: {}~{}\n'.format(block_start, block_end), file = f)
+    print('- Date: {}~{}\n'.format(str(datetime.fromtimestamp(genesis + (week - 1) * 7 * 24 * 60 * 60)), str(datetime.fromtimestamp(genesis + week * 7 * 24 * 60 * 60 - 1))), file = f)
+    print('- The number of transaction on this week: {}\n'.format(tx_count), file = f)
+    print('- Total utxo: {}\n'.format(utxo_cnt + utxo3_cnt + utxo5_cnt + utxo10_cnt), file = f)
 
     print('![](../images/mined_week{}.png)\n'.format(week), file = f)
-    print('Theoretical Total Supply: {} BTC\n'.format(btc(2099999997690000)), file = f)
-    print('Permanently disappeared: {} BTC\n'.format(btc(disappeared)), file = f)
-    print('Maximum Possible Total Supply: {} BTC\n'.format(btc(total_supply)), file = f)
-    print('Current Supply: {} BTC ({:.3f}%)\n'.format(btc(total_mined), total_mined / total_supply * 100), file = f)
+    print('- Theoretical Total Supply: {} BTC\n'.format(btc(2099999997690000)), file = f)
+    print('- Permanently Disappeared: {} BTC\n'.format(btc(disappeared)), file = f)
+    print('- Maximum Possible Total Supply: {} BTC\n'.format(btc(total_supply)), file = f)
+    print('- Current Supply: {} BTC ({:.3f}%)\n'.format(btc(total_mined), total_mined / total_supply * 100), file = f)
 
     print('![](../images/year_week{}.png)\n\n'.format(week), file = f)
-    print('Current Supply: {} BTC ({:.3f}%)\n'.format(btc(total_mined), total_mined / total_mined * 100), file = f)
-    print('More than 3 year: {} BTC ({:.3f}%)\n'.format(btc(utxo3_sum), utxo3_sum / total_mined * 100), file = f)
-    print('More than 5 year: {} BTC ({:.3f}%)\n'.format(btc(utxo5_sum), utxo5_sum / total_mined * 100), file = f)
-    print('More than 10 year: {} BTC ({:.3f}%)\n'.format(btc(utxo10_sum), utxo10_sum / total_mined * 100), file = f)
+    print('- Current Supply: {} BTC ({:.3f}%)\n'.format(btc(total_mined), total_mined / total_mined * 100), file = f)
+    print('- More than 3 years: {} BTC ({:.3f}%)\n'.format(btc(utxo3_sum), utxo3_sum / total_mined * 100), file = f)
+    print('- More than 5 years: {} BTC ({:.3f}%)\n'.format(btc(utxo5_sum), utxo5_sum / total_mined * 100), file = f)
+    print('- More than 10 years: {} BTC ({:.3f}%)\n'.format(btc(utxo10_sum), utxo10_sum / total_mined * 100), file = f)
 
     print('# Remarks\n', file = f)
     if burned:
         print('## Permanently Disappeared BTC\n', file = f)
         for value, block in burned:
-            print('{} satoshi disappeared on block {}\n'.format(value, block), file = f)
+            print('- {} satoshi disappeared on block {}\n'.format(value, block), file = f)
 
     if john:
-        print('## Permanently Disappeared BTC\n', file = f)
+        print('## 10 years of Waiting\n', file = f)
         for value, timestamp, block in john:
-            print('{} BTC was used in {} years and {} days\n'.format(btc(value), timestamp // (365 * 24 * 60 * 60), (timestamp // (24 * 60 * 60)) % 365))
+            print('- {} BTC was used in {} years and {} days on block {}\n'.format(btc(value), timestamp // (365 * 24 * 60 * 60), (timestamp // (24 * 60 * 60)) % 365), block)
 
     f.close()
