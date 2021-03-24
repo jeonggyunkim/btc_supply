@@ -300,31 +300,31 @@ string hex(unsigned char* buffer, int sz) {
 	return string(ret);
 }
 
-uint64_t VarInt(FILE* f) {
+uint64_t VarInt(FILE* f, bool increase) {
 	uint64_t ret;
 	fread(block + index, 1, 1, f);
 	if (block[index] < 0xfd) {
 		ret = block[index];
-		index += 1;
+		if (increase) index += 1;
 	}
 	else {
 		if (block[index] == 0xfd) {
-			index += 1;
+			if (increase) index += 1;
 			fread(block + index, 1, 2, f);
 			ret = *((uint16_t*)(block + index));
-			index += 2;
+			if (increase) index += 2;
 		}
 		else if (block[index] == 0xfe) {
-			index += 1;
+			if (increase) index += 1;
 			fread(block + index, 1, 4, f);
 			ret = *((uint32_t*)(block + index));
-			index += 4;
+			if (increase) index += 4;
 		}
 		else {
-			index += 1;
+			if (increase) index += 1;
 			fread(block + index, 1, 8, f);
 			ret = *((uint64_t*)(block + index));
-			index += 8;
+			if (increase) index += 8;
 		}
 	}
 	return ret;
@@ -360,14 +360,9 @@ int main() {
 			exit(0);
 		}
 
-		int tx_count = VarInt(f);
+		int tx_count = VarInt(f, 1);
 		total_tx_count += tx_count;
 //		cout << "Tx count: " << tx_count << '\n';
-		if (tx_count == 0) {
-			cerr << "Maybe Existence of SEGWIT!\n";
-			save();
-			exit(0);
-		}
 
 		uint64_t input_total = 0;
 		uint64_t output_total = 0;
@@ -377,7 +372,16 @@ int main() {
 			sz = fread(block + index, 1, 4, f);
 			index += sz;
 
-			int in_count = VarInt(f);
+			bool segwit = 0;
+			int in_count = VarInt(f, 1);
+			if (in_count == 0) { // SEGWIT
+				segwit = 1;
+
+				fread(block + index, 1, 1, f);
+				index--;
+
+				in_count = VarInt(f, 1);
+			}
 //			cout << "In count: " << in_count << '\n';
 			for (int j = 0; j < in_count; ++j) {
 				sz = fread(block + index, 1, 32, f);
@@ -389,7 +393,7 @@ int main() {
 				index += sz;
 //				cout << "Prev tx info: " << prev_txhash << ' ' << prev_txindex << '\n';
 
-				int script_length = VarInt(f);
+				int script_length = VarInt(f, 1);
 
 				sz = fread(block + index, 1, script_length, f);
 				index += sz;
@@ -422,7 +426,7 @@ int main() {
 				}
 			}
 
-			int out_count = VarInt(f);
+			int out_count = VarInt(f, 1);
 //			cout << "Out count: " << out_count << '\n';
 			vector<uint64_t> value_collection;
 			for (int j = 0; j < out_count; ++j) {
@@ -433,11 +437,22 @@ int main() {
 				value_collection.push_back(value);
 //				cout << "Value: " << value << '\n';
 
-				int script_length = VarInt(f);
+				int script_length = VarInt(f, 1);
 
 				sz = fread(block + index, 1, script_length, f);
 				index += sz;
 			}
+
+			if (segwit) {
+				for (int j = 0; j < in_count; ++j) {
+					int segwit_cnt = VarInt(f, 0);
+					for (int k = 0; k < segwit_cnt; ++k) {
+						int segwit_length = VarInt(f, 0);
+						fread(block + index, 1, segwit_length, f);
+					}
+				}
+			}
+
 			sz = fread(block + index, 1, 4, f);
 			uint64_t lock_time = *(uint64_t*)(block + index);
 			index += sz;
