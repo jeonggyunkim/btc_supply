@@ -7,7 +7,7 @@ reward = [5000000000, 2500000000, 1250000000, 625000000, 312500000, 156250000, 7
 def btc(value):
     return '{}.{:08d}'.format(value // 100000000, value % 100000000)
 
-for week in range(451, 10000):
+for week in range(530, 10000):
     sys.stdin = open('analyzed_temp/week{}'.format(week), 'rt')
 
     block_start, block_end = map(int, input().split())
